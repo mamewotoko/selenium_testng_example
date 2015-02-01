@@ -38,7 +38,6 @@
   </target>
 
   <target name="test">
-    <mkdir dir="${junit}"/>
     <junit fork="yes" printsummary="on">
       <test name="com.mamewo.sample.dbutil.TestDB" />
       <classpath refid="dbutil_sample.classpath"/>

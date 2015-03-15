@@ -1,12 +1,7 @@
-======================================================================
-dbutil sample
-======================================================================
+selenium_testng_example
+========================
 
-Build and test
---------------
-```bash
-ant clean build test
-```
+Motivating example to use TestNG with selenium 
 
 ----
 Takashi Masuyama <mamewotoko@gmail.com>

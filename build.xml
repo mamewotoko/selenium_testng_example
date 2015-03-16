@@ -75,14 +75,16 @@
     <!-- Create the distribution directory -->
     <mkdir dir="${dist}/lib"/>
 
-    <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
     <jar jarfile="${dist}/lib/selenium_testng_example.jar" basedir="${build}"/>
   </target>
 
   <target name="test">
+    <delete dir="${testng}" />
     <testng classpathref="selenium_testng_example.classpath"
-	    outputDir="${testng}">
-      <classfileset dir="${build}" includes="com/mamewo/sample/selenium_testng/TestSimpleNG.class" />
+	    outputDir="${testng}"
+	    verbose="2">
+      <classfileset dir="${build}"
+		    includes="**/TestSeleniumNG.class" />
     </testng>
   </target>
 
@@ -91,5 +93,6 @@
     <!-- Delete the ${build} and ${dist} directory trees -->
     <delete dir="${build}"/>
     <delete dir="${dist}"/>
+    <delete dir="${testng}"/>
   </target>
 </project>
